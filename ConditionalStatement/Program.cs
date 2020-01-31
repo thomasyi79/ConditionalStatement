@@ -13,37 +13,55 @@ namespace ConditionalStatement
         {
             // Ask the user for input
             Console.WriteLine("Please enter your grade.");
-
             //use try and catch to prevent any value type other than Int.
             try
             {
                 //gather data from user
                 string input = Console.ReadLine();
-
                 // convert a string into an int value
                 int grade = int.Parse(input);
-
                 // use if statement to limit value entered between 0-100, and display message
                 if (grade > 100 || grade < 0)
                     Console.WriteLine("Value entered cannot be greater than 100 or smaller than 0. Please exit and try again");
-                
-                // If grade is between 90-100, display message
-                if (grade >= 90 && grade <= 100)
+                // If grade is between 98-100, display message
+                if (grade >= 98 && grade <= 100)
+                    Console.WriteLine("Your letter grade is: A+");
+                // If grade is between 92-97, display message
+                else if (grade >= 92 && grade <= 97)
                     Console.WriteLine("Your letter grade is: A");
-                // If grade is between 80-90, display message
-                else if (grade >= 80 && grade < 90)
+                // If grade is between 90-91, display message
+                else if (grade >= 90 && grade <= 91)
+                    Console.WriteLine("Your letter grade is: A-");
+                // If grade is between 88-89, display message
+                else if (grade >= 88 && grade < 89)
+                    Console.WriteLine("Your letter grade is: B+");
+                // If grade is between 82-87, display message
+                else if (grade >= 82 && grade < 87)
                     Console.WriteLine("Your letter grade is: B");
-                // If grade is between 70-80, display message
-                else if (grade >= 70 && grade < 80)
+                // If grade is between 80-81, display message
+                else if (grade >= 80 && grade < 81)
+                    Console.WriteLine("Your letter grade is: B-");
+                // If grade is between 78-79, display message
+                else if (grade >= 78 && grade < 79)
+                    Console.WriteLine("Your letter grade is: C+");
+                // If grade is between 72-77, display message
+                else if (grade >= 72 && grade < 77)
                     Console.WriteLine("Your letter grade is: C");
-                // If grade is between 60-70, display message
-                else if (grade >= 60 && grade < 70)
-                    // If grade below 60, display message
+                // If grade is between 70-71, display message
+                else if (grade >= 70 && grade < 71)
+                    Console.WriteLine("Your letter grade is: C-");
+                // If grade is between 68-69, display message
+                else if (grade >= 68 && grade < 69)
+                    Console.WriteLine("Your letter grade is: D+");
+                // If grade is between 62-67, display message
+                else if (grade >= 62 && grade < 67)
                     Console.WriteLine("Your letter grade is: D");
+                // If grade is between 60-61, display message
+                else if (grade >= 60 && grade < 61)
+                    Console.WriteLine("Your letter grade is: D-");
+                // If grade is below 60%, display message
                 else if (grade < 60 && grade >= 0)
                     Console.WriteLine("Your letter grade is: F");
-
-
             } // End of try
             catch
             {
